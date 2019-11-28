@@ -34,7 +34,6 @@ def get_logger(log_dir, name, log_filename='info.log', level=logging.INFO):
 
 
 def prepare_train_valid_test_2d(data, test_size, valid_size):
-    print()
     train_len = int(data.shape[0] * (1 - test_size - valid_size))
     valid_len = int(data.shape[0] * valid_size)
 
