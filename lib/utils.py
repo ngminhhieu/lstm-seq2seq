@@ -69,8 +69,6 @@ def create_data(data, seq_len, r, input_dim, output_dim, horizon):
             _idx += 1
     return en_x, de_x, de_y
 
-
-
 def load_dataset(seq_len, horizon, input_dim, output_dim, dataset, r, test_size, valid_size, **kwargs):
     raw_data = np.load(dataset)['data']
 
