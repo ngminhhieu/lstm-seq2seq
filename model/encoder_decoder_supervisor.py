@@ -266,7 +266,7 @@ class EncoderDecoder():
             for k in range(K):
                 input = np.zeros(shape=(1, l, self._input_dim))
                 input[0, :, 0] = pd[i:i + l, k]
-                yhats = self._predict(input)
+                yhats = self._predict_full_model(input)
                 yhats = np.squeeze(yhats, axis=-1)
                 _pd[i + l:i + l + h, k] = yhats
                 # update y
